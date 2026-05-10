@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
+	<script src="physx.min.js"></script>
+  </head>
+  <body>
+    <a-scene physx="autoLoad: true; wasmUrl:https://cdn.jsdelivr.net/gh/c-frame/physx@v0.3.0/wasm/physx.release.wasm">
+	<a-camera>
+    <a-cursor></a-cursor>
+    <!-- Or <a-entity cursor></a-entity> -->
+  </a-camera>
+	<a-entity meta-touch-controls="hand: left model: true"></a-entity>
+	<a-entity meta-touch-controls="hand: right model: true"></a-entity>
+	
+      <a-box physx-body="type: static" position="-3 0.5 -3" scale="0.1 25 75" color="#4CC3D9"></a-box>
+      <a-box physx-body="type: static" position="3 0.5 -3" scale="0.1 25 75" color="#4CC3D9"></a-box>
+	  
+      <a-box physx-body="type: dynamic" position="0 0.5 -3" scale="0.2 0.5 0.2" color="#000"></a-box>
+      <a-box physx-body="type: dynamic" position="0.2 0.5 -3.3" scale="0.2 0.5 0.2" color="#000"></a-box>
+      <a-box physx-body="type: dynamic" position="-0.2 0.5 -3.3" scale="0.2 0.5 0.2" color="#000"></a-box>
+      <a-box physx-body="type: dynamic" position="0.4 0.5 -3.6" scale="0.2 0.5 0.2" color="#000"></a-box>
+      <a-box physx-body="type: dynamic" position="0 0.5 -3.6" scale="0.2 0.5 0.2" color="#000"></a-box>
+      <a-box physx-body="type: dynamic" position="-0.4 0.5 -3.6" scale="0.2 0.5 0.2" color="#000"></a-box>
+      <a-box physx-body="type: dynamic" position="-0.2 0.5 -3.9" scale="0.2 0.5 0.2" color="#000"></a-box>
+      <a-box physx-body="type: dynamic" position="-0.6 0.5 -3.9" scale="0.2 0.5 0.2" color="#000"></a-box>
+      <a-box physx-body="type: dynamic" position="0.2 0.5 -3.9" scale="0.2 0.5 0.2" color="#000"></a-box>
+      <a-box physx-body="type: dynamic" position="0.6 0.5 -3.9" scale="0.2 0.5 0.2" color="#000"></a-box>
+	  
+      <a-sphere id="bush" physx-body="type: dynamic"  position="0.25 1.25 -0.5" radius="0.1" color="#EF2D5E"></a-sphere>
+	  
+	  <a-plane position="0 0 -4" rotation="-90 0 0" width="40" height="160" color="#7BC8A4"></a-plane>
+      <a-sky color="#ECECEC"></a-sky>
+    </a-scene>
+  </body>
+</html>
